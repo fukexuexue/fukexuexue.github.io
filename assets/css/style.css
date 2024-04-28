@@ -160,11 +160,10 @@ footer { width: 232px; float: left; position: fixed; bottom: 30px; -webkit-font-
 }
 
 .photo-gallery img {
-  width: 100%; /* Images take full width of the column */
-  height: auto; /* Adjust the height to maintain aspect ratio */
-  object-fit: cover; /* This ensures images cover the area without distortion */
+  width: 100%; /* Make each image fully occupy its cell */
+  height: 200px; /* Set a fixed height for all images */
+  object-fit: cover; /* Cover the grid area, may crop images */
 }
-
 
 .centered-container {
   max-width: 800px; /* 设置最大宽度 */
