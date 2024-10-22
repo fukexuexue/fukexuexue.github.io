@@ -294,24 +294,17 @@
     <div id="vanalytics-map"></div>
 
     <script>
-      window.onload = function() {
-        if (typeof va === 'function') {
-          va('widget', 'map', {
-            element: '#vanalytics-map',
-            period: 'last30days',
-            width: '50%',
-            height: '400px',
-            theme: 'light',
-            mapType: 'world',
-            showLegend: true,
-            showTitle: true,
-            title: 'Our Global Visitors'
-          });
-        } else {
-          console.error('TWIPLA va function not found');
-          document.getElementById('vanalytics-map').innerHTML = 'Map loading error';
-        }
-      }
+      va('widget', 'map', {
+        element: '#vanalytics-map',
+        period: 'last30days',
+        width: '100%',
+        height: '400px',
+        theme: 'light',
+        mapType: 'world',
+        showLegend: true,
+        showTitle: true,
+        title: 'Our Global Visitors'
+      });
     </script>
 
     <!-- ... other content ... -->
