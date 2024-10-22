@@ -60,7 +60,14 @@
 
   <script src="assets/js/tooltip.js"></script>
 
-
+  <!-- Visitor Analytics tracking code -->
+  <script>
+    (function(v,i,s,i,t,o,r){v[t]=v[t]||function(){
+    (v[t].q=v[t].q||[]).push(arguments)};v[t].l=1*new Date();o=i.createElement(s),
+    r=i.getElementsByTagName(s)[0];o.async=1;o.src=g;r.parentNode.insertBefore(o,r)
+    })(window,document,'script','https://www.visitor-analytics.io/js/va.js','va');
+    va('init', 'YOUR_TRACKING_ID'); // Replace with your actual tracking ID
+  </script>
   </head>
   <body>
     
@@ -285,30 +292,16 @@
 <div class="wrapper"></div>
   <!-- ... other content ... -->
 
-
   <div id="vanalytics-map"></div>
 
-  <div class="wrapper">
-    <!-- ... other content ... -->
-    
-    <div id="vanalytics-map"></div>
-
-    <script>
-      va('widget', 'map', {
-        element: '#vanalytics-map',
-        period: 'last30days',
-        width: '100%',
-        height: '400px',
-        theme: 'light',
-        mapType: 'world',
-        showLegend: true,
-        showTitle: true,
-        title: 'Our Global Visitors'
-      });
-    </script>
-
-    <!-- ... other content ... -->
-  </div>
+  <script>
+    va('widget', 'map', {
+      element: '#vanalytics-map',
+      period: 'last30days',
+      width: '100%',
+      height: '400px'
+    });
+  </script>
 
   <!-- ... other content ... -->
 </div>
@@ -331,6 +324,6 @@
 <br />
 
 
-<!-- TWIPLA Tracking Code for https://fukexuexue.github.io --><script>(function(v,i,s,a,t){v[t]=v[t]||function(){(v[t].v=v[t].v||[]).push(arguments)};if(!v._visaSettings){v._visaSettings={}}v._visaSettings[a]={v:'1.0',s:a,a:'1',t:t};var b=i.getElementsByTagName('body')[0];var p=i.createElement('script');p.defer=1;p.async=1;p.src=s+'?s='+a;b.appendChild(p)})(window,document,'//app-worker.visitor-analytics.io/main.js','ae3fd62b-9044-11ef-9280-bee4895ac99e','va')</script><!-- TWIPLA Tracking Code for https://fukexuexue.github.io -->
+
   </body>
 </html>
