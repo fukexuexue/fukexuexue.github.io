@@ -102,35 +102,41 @@
       <header>
         
         
-        <a class="image"><img src="assets/img/headshot.JPG" alt="avatar" style="width: 90%; border-radius: 0;" /></a>
-        
-        <h2 style="margin-top: 5px; margin-bottom: 0px; font-size: 1.5em;">Kexue 'Shirley' Fu</h2>
-        <h2 style="margin-top: 0; margin-bottom: 5px; font-size: 1.5em;">付珂雪</h2>
+        <div style="display: flex; gap: 40px;">
+          <!-- 左侧栏 -->
+          <div style="width: 300px; flex-shrink: 0;">
+            <!-- 头像 -->
+            <a class="image"><img src="assets/img/headshot.JPG" alt="avatar" style="width: 100%; border-radius: 0;" /></a>
+            
+            <!-- 名字和机构信息 -->
+            <h2 style="margin-top: 10px; margin-bottom: 5px;">Kexue 'Shirley' Fu</h2>
+            <h2 style="margin-top: 0; margin-bottom: 10px;">付珂雪</h2>
+            <div>City University of Hong Kong</div>
+            <div><email>kexuefu2-c@my.cityu.edu.hk</email></div>
+            
+            <!-- 社交图标 -->
+            <div class="social-icons" style="margin-top: 10px;">
+              <!-- 原有的社交图标代码 -->
+            </div>
 
-        <div style="margin-bottom: 5px; font-size: 0.9em;">City University of Hong Kong</div>
-        <div style="margin-bottom: 5px; font-size: 0.9em;"><email>kexuefu2-c@my.cityu.edu.hk</email></div>
-        <div class="social-icons" style="margin-top: -5px;">
-          <a style="margin: 0 5px 0 0" href="https://scholar.google.com/citations?user=_IuBt04AAAAJ&hl=zh-CN" title="Google Scholar">
-            <i class="ai ai-google-scholar" style="font-size:1rem"></i>
-          </a>  
-          
-          <a style="margin: 0 0 0 0" href="https://x.com/FuKexue60887?s=20" title="Twitter">
-            <i class="fab fa-x-twitter" style="font-size:1rem"></i>
-          </a>
+            <!-- News 部分 -->
+            <div style="margin-top: 30px;">
+              <div id="news-header" style="display: flex; align-items: center; gap: 10px;">
+                <span style="color: #2c3e50; font-size: 24px;">📣</span>
+                <h2 style="margin: 0;">News</h2>
+              </div>
 
-          <a style="margin: 0 0 0 0" href="https://www.instagram.com/0805kexue/" title="Instagram">
-            <i class="fab fa-instagram" style="font-size:1rem"></i>
-          </a>
-          
-          <a style="margin: 0 0 0 5px" href="assets/pdf/CV.pdf" title="Curriculum Vitae">
-            <i class="fas fa-file-alt" style="font-size:1rem"></i>
-          </a>
+              <div class="news-container" style="font-size: 0.9em;">
+                <!-- 原有的 news items -->
+              </div>
+            </div>
+          </div>
+
+          <!-- 右侧主要内容区域 -->
+          <div style="flex: 1;">
+            <!-- 其他所有内容（研究介绍等）放在这里 -->
+          </div>
         </div>
-        <h4 style="margin-top: 0; margin-bottom: 10px; font-size: 0.9em;">I am always delighted to work and collaborate with brilliant minds!</h4>
-        
-
-        
-        <br>
 
       </header>
       <section>
@@ -345,7 +351,7 @@
   color: #666;
   margin-top: 20px;
 ">
-  &copy; 2024 by Kexue Shirley Fu | Last updated: 11/2024
+  &copy; 2024 by Kexue Shirley Fu | Last updated: 10/2024
 </footer>  
 
 </li>
