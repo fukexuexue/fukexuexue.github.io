@@ -199,7 +199,7 @@ footer { width: 232px; float: left; position: fixed; bottom: 30px; -webkit-font-
 }
 
 .news-container {
-  max-height: 400px; /* 减小了最大��度 */
+  max-height: 400px; /* 减小了最大高度 */
   overflow-y: auto;
   padding-right: 10px; /* 减小了右侧内边距 */
   width: 90%; /* 限制容器宽度，可以根据需要调整 */
@@ -286,51 +286,6 @@ footer { width: 232px; float: left; position: fixed; bottom: 30px; -webkit-font-
   font-size: 24px; /* 调整字体大小，根据需要修改 */
 }
 
-/* Gallery Layout */
-.gallery-row {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 30px;
-}
 
-.gallery-item {
-    flex: 0 1 45%;
-    max-width: 45%;
-    position: relative;
-    overflow: hidden;
-}
 
-/* Image Styles */
-.gallery-item img {
-    width: 100%;
-    height: 300px;
-    object-fit: contain;
-    background-color: #f5f5f5;
-    transition: transform 0.3s ease;
-}
-
-/* Heading Styles */
-.gallery-item h4 {
-    margin-top: 15px;
-    text-align: center;
-}
-
-/* Icon Container */
-.icon-container {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
-}
-
-/* Icon Links */
-.icon-link, .icon-link1 {
-    color: #333;
-    font-size: 1.2em;
-    transition: color 0.3s ease;
-}
-
-.icon-link:hover, .icon-link1:hover {
-    color: #007bff;
-}
+When I write, I usually start from the very beginning. Maybe there is a synopsis in my mind, but I don’t structure what I am going to write on paper, before I start. There must be a hook in the beginning, that you can return to later in the text, and it’s all about finding the stories. Some stories I already know of, others I have to find. I have on occasion had a co-writer who has helped me with finding and formulating stories. My stories usually contain some current research but mainly they are aimed at educating the reader about science. One of my colleagues usually says that people are interested in other people, so that’s what you find in my popular science texts. There also needs to be a good mix of people and places around the world and there can be stories of love and death.
