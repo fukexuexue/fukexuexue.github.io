@@ -1,0 +1,25 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="circleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f3a4ac;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#39c;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glowEffect">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Main circle -->
+  <circle cx="40" cy="40" r="35" fill="url(#circleGradient)" filter="url(#glowEffect)"/>
+  
+  <!-- Play button -->
+  <polygon points="30,25 30,55 55,40" fill="white" opacity="0.9"/>
+  
+  <!-- Text -->
+  <text x="40" y="65" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="url(#circleGradient)" text-anchor="middle">DEMO</text>
+</svg>
