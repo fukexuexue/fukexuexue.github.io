@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
+    <meta charset="UTF-8">
     <title>Kexue Shirley Fu</title>
     <style>
-      .pub-row:not(:last-child) {
-      margin-bottom: 20px;
       @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
+      .pub-row:not(:last-child) { margin-bottom: 20px; }
       .artistic {
           font-family: 'Merriweather', serif;
-          font-size: 12px; /* 字号 */
-          font-style: italic; /* 斜体 */
+          font-size: 12px;
+          font-style: italic;
           text-align: justify;
           text-justify: inter-word;
       }
-  </style>
+    </style>
     <link rel="canonical" href="index.html"/>
     <link rel="icon" media="(prefers-color-scheme:dark)" href="assets/img/k.png" type="image/png" />
     <link rel="icon" media="(prefers-color-scheme:light)" href="assets/img/k.png" type="image/png" />
@@ -28,6 +27,16 @@
     <script type="text/javascript" src="assets/js/jquery.js"></script>
     <script src="assets/js/favicon-switcher.js" type="application/javascript"></script>
     
+    <style>
+      .pub-filter-bar { display: flex; gap: 8px; margin-bottom: 18px; }
+      .pub-filter-btn {
+        padding: 5px 16px; border-radius: 20px; border: 1.5px solid #1a3a5c;
+        background: white; color: #1a3a5c; font-size: 0.85em; cursor: pointer;
+        transition: background 0.2s, color 0.2s;
+      }
+      .pub-filter-btn.active { background: #1a3a5c; color: white; }
+      .pub-filter-btn:hover:not(.active) { background: #e8eef4; }
+    </style>
     <script type="text/javascript">
       function toggle_vis(id) {
           var e = document.getElementById(id);
@@ -35,6 +44,20 @@
               e.style.display = 'inline';
           else
               e.style.display = 'none';
+      }
+      function filterPubs(type) {
+        document.getElementById('btn-all').classList.toggle('active', type === 'all');
+        document.getElementById('btn-first').classList.toggle('active', type === 'first');
+        document.querySelectorAll('.bibliography li').forEach(function(li) {
+          li.style.display = (type === 'all' || li.dataset.firstAuthor === 'true') ? '' : 'none';
+        });
+        document.querySelectorAll('.publications h3').forEach(function(h3) {
+          var ol = h3.nextElementSibling;
+          while (ol && ol.tagName !== 'OL') ol = ol.nextElementSibling;
+          if (!ol) return;
+          var hasVisible = Array.from(ol.querySelectorAll('li')).some(function(li) { return li.style.display !== 'none'; });
+          h3.style.display = hasVisible ? '' : 'none';
+        });
       }
    </script>
 
@@ -112,8 +135,12 @@
         <div class="social-icons" style="margin-top: -5px;">
           <a style="margin: 0 5px 0 0" href="https://scholar.google.com/citations?user=_IuBt04AAAAJ&hl=zh-CN" title="Google Scholar">
             <i class="ai ai-google-scholar" style="font-size:1rem"></i>
-          </a>  
-          
+          </a>
+
+          <a style="margin: 0 5px 0 0" href="https://www.linkedin.com/in/kexuefu/" title="LinkedIn">
+            <i class="fab fa-linkedin" style="font-size:1rem"></i>
+          </a>
+
           <a style="margin: 0 0 0 0" href="https://x.com/FuKexue60887?s=20" title="Twitter">
             <i class="fab fa-x-twitter" style="font-size:1rem"></i>
           </a>
@@ -248,13 +275,16 @@
 <h1 id="publications"></h1>
 <br>
 <div class="publications">
-  <h2>Selected Publications</h2>
-
+  <h2>Publications</h2>
+  <div class="pub-filter-bar">
+    <button id="btn-all" class="pub-filter-btn active" onclick="filterPubs('all')">All Publications</button>
+    <button id="btn-first" class="pub-filter-btn" onclick="filterPubs('first')">Selected Publications</button>
+  </div>
 
   <h3> <span style="color:#c47c2b;"><b>Cognitive Support</b></span> of Human-AI Interaction Paradigms</h3>
 
   <ol class="bibliography">
-    <li>
+    <li data-first-author="true">
       <div class="pub-row">
         <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
           <img src="assets/img/visual instruments.png" class="teaser img-fluid z-depth-1" style="width=80;height=30%" />
@@ -275,7 +305,7 @@
       </div>
     </li>
 
-    <li>
+    <li data-first-author="true">
       <div class="pub-row">
         <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
           <abbr class="badge">DIS</abbr>
@@ -303,7 +333,7 @@
   <h3>Human-AI Interaction to Support <span style="color:#c47c2b;">Science Communication</span></h3>
   <ol class="bibliography">
 
-    <li>
+    <li data-first-author="true">
       <div class="pub-row">
         <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
           <img src="assets/img/taxonomy.png" class="teaser img-fluid z-depth-1" style="width=80;height=30%" />
@@ -320,7 +350,7 @@
       </div>
     </li>
 
-    <li>
+    <li data-first-author="false">
       <div class="pub-row">
         <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
           <img src="assets/img/science_agent.png" class="teaser img-fluid z-depth-1" style="width=100;height=40%" />
@@ -345,7 +375,7 @@
   <!-- 主题 1: HCI -->
   <h3>Human-AI Interaction Design to Support <span style="color:#c47c2b;">Digital Storytelling</span></h3>
   <ol class="bibliography">
-    <li>
+    <li data-first-author="true">
       <div class="pub-row">
         <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
           <img src="assets/img/00.png" class="teaser img-fluid z-depth-1" style="width=100;height=40%" />
@@ -363,7 +393,7 @@
       </div>
     </li>
 
-    <li>
+    <li data-first-author="false">
       <div class="pub-row">
         <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
           <img src="assets/img/6.2progressive.png" class="teaser img-fluid z-depth-1" style="width=100;height=40%" />
@@ -381,7 +411,7 @@
       </div>
     </li>
 
-    <li>
+    <li data-first-author="false">
       <div class="pub-row">
         <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
           <img src="assets/img/Storyboard v1.png" class="teaser img-fluid z-depth-1" style="width=100;height=40%" />
@@ -406,7 +436,7 @@
   <!-- 主题 2: VR -->
   <h3><span style="color:#c47c2b;">Embodied Interaction</span> for Empowering Creative Expression</h3>
   <ol class="bibliography">
-    <li>
+    <li data-first-author="true">
       <div class="pub-row">
         <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
           <img src="assets/img/10.png" class="teaser img-fluid z-depth-1" style="width=100;height=40%" />
@@ -425,7 +455,7 @@
       </div>
     </li>
 
-    <li>
+    <li data-first-author="false">
       <div class="pub-row">
         <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
           <img src="assets/img/dance_CHI.jpg" class="teaser img-fluid z-depth-1" style="width=100;height=40%" />
@@ -443,7 +473,7 @@
       </div>
     </li>
 
-    <li>
+    <li data-first-author="false">
       <div class="pub-row">
         <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
           <img src="assets/img/dance_cscw.png" class="teaser img-fluid z-depth-1" style="width=100;height=40%" />
@@ -480,46 +510,7 @@
 
 </div>
 
-<div class="wrapper"></div>
-  <!-- ... other content ... -->
-
-
-  <div id="vanalytics-map"></div>
-
-  <div class="wrapper">
-    <!-- ... other content ... -->
-    
-    <div id="vanalytics-map"></div>
-
-    <script>
-      window.onload = function() {
-        if (typeof va === 'function') {
-          va('widget', 'map', {
-            element: '#vanalytics-map',
-            period: 'last30days',
-            width: '50%',
-            height: '400px',
-            theme: 'light',
-            mapType: 'world',
-            showLegend: true,
-            showTitle: true,
-            title: 'Our Global Visitors'
-          });
-        } else {
-          console.error('TWIPLA va function not found');
-          document.getElementById('vanalytics-map').innerHTML = 'Map loading error';
-        }
-      }
-    </script>
-
-    <!-- ... other content ... -->
-  </div>
-
-  <!-- ... other content ... -->
-</div>
 <footer style="
-  left: 0;
-  bottom: 0;
   width: 100%;
   background-color: #ffffff;
   text-align: center;
@@ -529,11 +520,7 @@
   margin-top: 20px;
 ">
   &copy; 2025 by Kexue Shirley Fu | Last updated: 05/2026
-</footer>  
-
-</li>
-
-<br />
+</footer>
 
 
 <!-- TWIPLA Tracking Code for https://fukexuexue.github.io --><script>(function(v,i,s,a,t){v[t]=v[t]||function(){(v[t].v=v[t].v||[]).push(arguments)};if(!v._visaSettings){v._visaSettings={}}v._visaSettings[a]={v:'1.0',s:a,a:'1',t:t};var b=i.getElementsByTagName('body')[0];var p=i.createElement('script');p.defer=1;p.async=1;p.src=s+'?s='+a;b.appendChild(p)})(window,document,'//app-worker.visitor-analytics.io/main.js','ae3fd62b-9044-11ef-9280-bee4895ac99e','va')</script><!-- TWIPLA Tracking Code for https://fukexuexue.github.io -->
