@@ -24,7 +24,7 @@ body { background-color: #fff; padding: 0px; font: 16.0px/1.5 Crimson Pro, serif
   transition: opacity 0.3s, visibility 0.3s;
 }
 
-.social-icons a { display: inline-block; height: 2.4rem; width: 2.4rem; background-color: transparent; color: #39c !important; border-radius: 100%; text-align: center; font-size: 1.15rem; line-height: 2.5rem; margin-right: 1rem; }
+.social-icons a { display: inline-block; height: 2.4rem; width: 2.4rem; background-color: transparent; color: #1a3a5c !important; border-radius: 100%; text-align: center; font-size: 1.15rem; line-height: 2.5rem; margin-right: 1rem; }
 
 .social-icons a:last-child { margin-right: 0; }
 
@@ -36,11 +36,11 @@ body { background-color: #fff; padding: 0px; font: 16.0px/1.5 Crimson Pro, serif
 
 .icon-button:hover span { width: 3.6rem; height: 3.6rem; border-radius: 3.6rem; margin: -1.8rem; }
 
-.twitter span { background-color: #39c; }
+.twitter span { background-color: #1a3a5c; }
 
-.facebook span { background-color: #39c; }
+.facebook span { background-color: #1a3a5c; }
 
-.linkedin span { background-color: #39c; }
+.linkedin span { background-color: #1a3a5c; }
 
 .github span { background-color: #000; }
 
@@ -48,13 +48,13 @@ email { font-size: 14px; font-family: "Ubuntu Mono"; }
 
 .icon-button i { background: none; color: white; height: 3.6rem; left: 0; line-height: 3.6rem; position: absolute; top: 0; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; -o-transition: all 0.3s; transition: all 0.3s; width: 3.6rem; z-index: 10; }
 
-.icon-button .icon-twitter { color: #39c; }
+.icon-button .icon-twitter { color: #1a3a5c; }
 
-.icon-button .icon-facebook { color: #39c; }
+.icon-button .icon-facebook { color: #1a3a5c; }
 
 .icon-button .icon-github { color: #000; }
 
-.icon-button .icon-linkedin { color: #39c; }
+.icon-button .icon-linkedin { color: #1a3a5c; }
 
 .icon-button:hover .icon-twitter, .icon-button:hover .icon-facebook, .icon-button:hover .icon-github, .icon-button:hover .icon-linkedin { color: white; }
 
@@ -87,11 +87,11 @@ papertitle { font-weight: 600; font-size: 100%; }
   width: 10em; /* 从 8.00em 增加到 10em */
 }
 
-h3, h4, h5, h6 { font-weight: 600; color: #39c; margin: 0 0 20px; }
+h3, h4, h5, h6 { font-weight: 600; color: #1a3a5c; margin: 0 0 20px; }
 
-h1 { font-weight: 500; color: #39c; margin: 0 0 20px; }
+h1 { font-weight: 500; color: #1a3a5c; margin: 0 0 20px; }
 
-h2 { color: #39c; font-weight: 500; margin: 2px 0px 15px; font-size: 157%; }
+h2 { color: #1a3a5c; font-weight: 500; margin: 2px 0px 15px; font-size: 157%; }
 
 p, ul, ol, table, pre, dl { margin: 0 0 20px; }
 
@@ -99,9 +99,9 @@ h1, h2, h3 { line-height: 1.1; }
 
 h1 { font-size: 28px; }
 
-a { color: #39c; text-decoration: none; }
+a { color: #1a3a5c; text-decoration: none; }
 
-a:hover { color: #39c; }
+a:hover { color: #1a3a5c; }
 
 a small { font-size: 11px; color: #777; margin-top: -0.3em; display: block; }
 
@@ -213,7 +213,7 @@ footer { width: 232px; float: left; position: fixed; bottom: 30px; -webkit-font-
   padding: 8px 12px; /* 减小了内边距 */
   margin-bottom: 8px; /* 进一步减少了底部边距 */
   transition: all 0.3s ease;
-  border-left: 2px solid #39c; /* 进一步减小了左边框宽度 */
+  border-left: 2px solid #1a3a5c; /* 进一步减小了左边框宽度 */
 }
 
 .news-item:hover {
@@ -222,7 +222,7 @@ footer { width: 232px; float: left; position: fixed; bottom: 30px; -webkit-font-
 }
 
 .news-item strong {
-  color: #39c;
+  color: #1a3a5c;
   font-size: 0.85em; /* 稍微减小了字体大小 */
   margin-right: 4px;
 }
@@ -241,11 +241,11 @@ footer { width: 232px; float: left; position: fixed; bottom: 30px; -webkit-font-
   border-radius: 8px;
 }
 .news-container::-webkit-scrollbar-thumb {
-  background: #39c;
+  background: #1a3a5c;
   border-radius: 8px;
 }
 .news-container::-webkit-scrollbar-thumb:hover {
-  background: #2980b9;
+  background: #0f2238;
 }
 
 /*# sourceMappingURL=style.css.map */
@@ -260,7 +260,7 @@ footer { width: 232px; float: left; position: fixed; bottom: 30px; -webkit-font-
 #news-header svg {
   width: 24px;
   height: 24px;
-  color: #39c; /* 使用你的主题色 */
+  color: #1a3a5c; /* 使用你的主题色 */
 }
 
 #news-header h2 {
@@ -278,7 +278,7 @@ footer { width: 232px; float: left; position: fixed; bottom: 30px; -webkit-font-
 #research-header svg {
   width: 24px;
   height: 24px;
-  color: #39c; /* 使用你的主题色 */
+  color: #1a3a5c; /* 使用你的主题色 */
 }
 
 #research-header h2 {
@@ -339,30 +339,30 @@ footer { width: 232px; float: left; position: fixed; bottom: 30px; -webkit-font-
 @keyframes pulse {
     0% {
         transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(57, 204, 204, 0.7);
+        box-shadow: 0 0 0 0 rgba(26, 58, 92, 0.7);
     }
     70% {
         transform: scale(1.05);
-        box-shadow: 0 0 0 10px rgba(57, 204, 204, 0);
+        box-shadow: 0 0 0 10px rgba(26, 58, 92, 0);
     }
     100% {
         transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(57, 204, 204, 0);
+        box-shadow: 0 0 0 0 rgba(26, 58, 92, 0);
     }
 }
 
 @keyframes pulse2 {
     0% {
         transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(243, 164, 172, 0.7);
+        box-shadow: 0 0 0 0 rgba(196, 124, 43, 0.7);
     }
     70% {
         transform: scale(1.05);
-        box-shadow: 0 0 0 10px rgba(243, 164, 172, 0);
+        box-shadow: 0 0 0 10px rgba(196, 124, 43, 0);
     }
     100% {
         transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(243, 164, 172, 0);
+        box-shadow: 0 0 0 0 rgba(196, 124, 43, 0);
     }
 }
 
@@ -395,23 +395,23 @@ footer { width: 232px; float: left; position: fixed; bottom: 30px; -webkit-font-
 @keyframes demoGlow {
     0% {
         transform: scale(1);
-        box-shadow: 0 0 20px rgba(243, 164, 172, 0.5), 0 0 40px rgba(57, 204, 204, 0.3);
+        box-shadow: 0 0 20px rgba(196, 124, 43, 0.5), 0 0 40px rgba(26, 58, 92, 0.3);
     }
     25% {
         transform: scale(1.05);
-        box-shadow: 0 0 25px rgba(57, 204, 204, 0.6), 0 0 50px rgba(243, 164, 172, 0.4);
+        box-shadow: 0 0 25px rgba(26, 58, 92, 0.6), 0 0 50px rgba(196, 124, 43, 0.4);
     }
     50% {
         transform: scale(1.1);
-        box-shadow: 0 0 30px rgba(243, 164, 172, 0.7), 0 0 60px rgba(57, 204, 204, 0.5);
+        box-shadow: 0 0 30px rgba(196, 124, 43, 0.7), 0 0 60px rgba(26, 58, 92, 0.5);
     }
     75% {
         transform: scale(1.05);
-        box-shadow: 0 0 25px rgba(57, 204, 204, 0.6), 0 0 50px rgba(243, 164, 172, 0.4);
+        box-shadow: 0 0 25px rgba(26, 58, 92, 0.6), 0 0 50px rgba(196, 124, 43, 0.4);
     }
     100% {
         transform: scale(1);
-        box-shadow: 0 0 20px rgba(243, 164, 172, 0.5), 0 0 40px rgba(57, 204, 204, 0.3);
+        box-shadow: 0 0 20px rgba(196, 124, 43, 0.5), 0 0 40px rgba(26, 58, 92, 0.3);
     }
 }
 
@@ -459,7 +459,7 @@ footer { width: 232px; float: left; position: fixed; bottom: 30px; -webkit-font-
 
 .demo-btn:hover {
     transform: translateY(-3px) scale(1.1);
-    box-shadow: 0 8px 25px rgba(243, 164, 172, 0.4), 0 0 30px rgba(57, 204, 204, 0.6);
+    box-shadow: 0 8px 25px rgba(196, 124, 43, 0.4), 0 0 30px rgba(26, 58, 92, 0.6);
 }
 
 /* News section styling */
@@ -507,11 +507,11 @@ footer { width: 232px; float: left; position: fixed; bottom: 30px; -webkit-font-
 
 .news-item:hover {
     background: #f8f9fa;
-    border-left-color: #39c;
+    border-left-color: #1a3a5c;
 }
 
 .news-item strong {
-    color: #39c;
+    color: #1a3a5c;
     font-weight: bold;
     font-size: 0.95em;
 }
@@ -521,7 +521,7 @@ footer { width: 232px; float: left; position: fixed; bottom: 30px; -webkit-font-
     padding: 10px 12px;
     background: rgba(255, 255, 255, 0.7);
     border-radius: 6px;
-    border-left: 3px solid #f3a4ac;
+    border-left: 3px solid #c47c2b;
     transition: all 0.3s ease;
     font-size: 0.9em;
     line-height: 1.4;
@@ -530,13 +530,13 @@ footer { width: 232px; float: left; position: fixed; bottom: 30px; -webkit-font-
 
 .news-item-compact:hover {
     background: rgba(255, 255, 255, 0.9);
-    border-left-color: #39c;
+    border-left-color: #1a3a5c;
     transform: translateX(3px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .news-item-compact strong {
-    color: #39c;
+    color: #1a3a5c;
     font-weight: bold;
     font-size: 0.95em;
 }

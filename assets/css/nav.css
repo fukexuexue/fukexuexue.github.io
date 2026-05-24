@@ -1,6 +1,6 @@
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #3498db; /* 使用图片中的蓝色 */
+  background-color: #1a3a5c; /* 使用图片中的蓝色 */
   overflow: hidden;
 position:fixed;
 z-index:1000;
@@ -202,7 +202,7 @@ z-index:1000;
 }
 
 .nav-links a:hover {
-  color: #f3a4ac;
+  color: #c47c2b;
 }
 
 /* 移除之前的媒体查询，添加新的响应式设计 */
