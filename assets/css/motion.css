@@ -53,3 +53,25 @@ html { scroll-behavior: smooth; }
   }
 }
 @media print { .loopy-cursor { display: none !important; } }
+
+/* Make paper links and controls visibly interactive. */
+.paper-image-link { display: inline-block; border-radius: 8px; line-height: 0; }
+.publications .abbr .badge { pointer-events: none; }
+:is(button, a.btn, .social-icons a, #back-to-top) {
+  transition: transform 180ms ease, background-color 180ms ease, color 180ms ease, box-shadow 180ms ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  :is(button, a.btn, .social-icons a, #back-to-top):hover { transform: translateY(-2px); }
+  :is(button:not(.profile-photos), a.btn):hover {
+    background-color: #c47c2b !important;
+    color: #fff !important;
+    box-shadow: 0 3px 8px rgba(26, 58, 92, .18) !important;
+  }
+}
+:is(button, a.btn, .social-icons a, #back-to-top):active { transform: translateY(0) scale(.97); }
+:is(button, a.btn, .social-icons a, .paper-image-link, #back-to-top):focus-visible {
+  outline: 2px solid #c47c2b; outline-offset: 4px;
+}
+@media (prefers-reduced-motion: reduce) {
+  :is(button, a.btn, .social-icons a, #back-to-top) { transition: none; transform: none !important; }
+}
