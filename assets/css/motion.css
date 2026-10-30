@@ -75,3 +75,10 @@ html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) {
   :is(button, a.btn, .social-icons a, #back-to-top) { transition: none; transform: none !important; }
 }
+
+/* Reserve a line for social labels so they never cover profile text. */
+.social-link-label {
+  display: block; height: 22px; line-height: 22px; margin: 2px 0 5px;
+  font-size: 13px; font-weight: 400; color: #1a3a5c; text-align: center;
+  pointer-events: none;
+}
