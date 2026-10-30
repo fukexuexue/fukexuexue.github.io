@@ -54,7 +54,7 @@
     };
     const show = () => {
       if (!ready || !position || !finePointer.matches) return;
-      cursor.style.transform = `translate3d(${Math.min(position.x + 14, window.innerWidth - 50)}px, ${Math.min(position.y + 14, window.innerHeight - 50)}px, 0)`;
+      cursor.style.transform = `translate3d(${Math.min(position.x + 14, window.innerWidth - 30)}px, ${Math.min(position.y + 14, window.innerHeight - 30)}px, 0)`;
       cursor.classList.add('is-visible');
       document.documentElement.classList.add('loopy-active');
       checkImage();

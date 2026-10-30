@@ -32,14 +32,14 @@ html { scroll-behavior: smooth; }
 @media print { .profile-photos .profile-alternate { display: none; } .motion-reveal { animation: none; } }
 
 /* The small Loopy follows the pointer; images trigger a radial firework. */
-.loopy-cursor { display: none; position: fixed; top: 0; left: 0; width: 48px; height: 48px; z-index: 10000; pointer-events: none; }
+.loopy-cursor { display: none; position: fixed; top: 0; left: 0; width: 28px; height: 28px; z-index: 10000; pointer-events: none; }
 .loopy-cursor * { pointer-events: none; }
-.loopy-character { display: block; width: 48px; height: 48px; background: url('../img/Loopy1.png') left center / auto 46px no-repeat; transform-origin: 50% 80%; }
-.loopy-spark { position: absolute; left: 24px; top: 24px; width: 8px; height: 8px; border-radius: 50%; color: var(--global-theme-color, #1a3a5c); background: currentColor; box-shadow: 0 0 0 1px #fff9, 0 0 8px 2px currentColor; opacity: 0; }
+.loopy-character { display: block; width: 28px; height: 28px; background: url('../img/Loopy1.png') left center / auto 27px no-repeat; transform-origin: 50% 80%; }
+.loopy-spark { position: absolute; left: 14px; top: 14px; width: 8px; height: 8px; border-radius: 50%; color: var(--global-theme-color, #1a3a5c); background: currentColor; box-shadow: 0 0 0 1px #fff9, 0 0 8px 2px currentColor; opacity: 0; }
 .loopy-spark:nth-child(3n) { color: #c47c2b; width: 6px; height: 11px; }
 .loopy-spark:nth-child(3n + 1) { color: var(--global-hover-color, #ffb81c); }
 @media (hover: hover) and (pointer: fine) {
-  html.loopy-active, html.loopy-active * { cursor: none !important; }
+  /* Keep the native arrow/hand at the exact click point. */
   .loopy-cursor.is-visible { display: block; }
 }
 @media (prefers-reduced-motion: no-preference) {
