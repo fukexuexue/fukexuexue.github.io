@@ -19,9 +19,11 @@
     <link rel="icon" media="(prefers-color-scheme:light)" href="assets/img/k.png" type="image/png" />
     <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin=anonymous>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=20261030-theme-sparks">
     <link rel="stylesheet" href="assets/css/pub.css">
     <link rel="stylesheet" href="assets/css/nav.css">
+    <link rel="stylesheet" href="assets/css/motion.css?v=20261030-theme-sparks">
+    <script defer src="assets/js/motion.js?v=20261030-theme-sparks"></script>
     
     <script src="assets/js/github-stars.js"></script>
     <script type="text/javascript" src="assets/js/jquery.js"></script>
@@ -116,7 +118,10 @@
       <header>
         
         
-        <a class="image"><img src="assets/img/profile.jpg" alt="avatar" style="width: 80%; max-width: 300px; border-radius: 0;" /></a>
+        <button class="profile-photos" type="button" aria-label="Show alternate portrait" aria-pressed="false">
+          <img src="assets/img/profile.jpg" alt="Kexue Shirley Fu" class="profile-main">
+          <img src="assets/img/profile-alternate.jpg" alt="" aria-hidden="true" class="profile-alternate" width="667" height="1000">
+        </button>
         
         <h2 style="margin-top: 5px; margin-bottom: 0px; font-size: 1.5em;">Kexue 'Shirley' Fu</h2>
         <h2 style="margin-top: 0; margin-bottom: 5px; font-size: 1.5em;">付珂雪</h2>
@@ -152,13 +157,18 @@
 
       <h1 id="about-me"></h1>
 
-<h2 style="margin: 60px 0px 10px;">
+<div class="intro-heading">
+<h2>
   <img src="assets/img/Loopy2.JPG" alt="Wave" style="height: 1.5em; vertical-align: middle; margin-right: 10px;">
   Hi there!
 </h2>
+</div>
 
-<p style="text-align: justify;">I am a fourth-year PhD candidate at <span style="color: #1a3a5c;"><a href="https://www.cityu.edu.hk/">City University of Hong Kong</a></span>, where I have been fortunate to work with <span style="color: #1a3a5c;"><a href="https://recfro.github.io/">Prof. RAY LC</a></span>, <span style="color: #1a3a5c;"><a href="https://shengdongzhao.com/">Prof. Shengdong Zhao</a></span>, and <span style="color: #1a3a5c;"><a href="https://www.scm.cityu.edu.hk/people/lei-qinyuan">Prof. Qinyuan Lei</a></span>. I also served as a visiting scholar at <span style="color: #1a3a5c;"><a href="https://www.nd.edu/">the University of Notre Dame</a></span>, working with <span style="color: #1a3a5c;"><a href="https://toby.li/">Prof. Toby Jiajun Li</a></span>. I am also a research scientist intern at <span style="color: #1a3a5c;"><a href="https://research.adobe.com/">Adobe Research</a></span>.<br><br>My research focuses on empowering individuals in complex <span style="color: #1a3a5c;">creative</span> and <span style="color: #1a3a5c;">communicative</span> contexts that require inspiration, creativity, and nuanced support.</p>
+<p style="text-align: justify;">I am a fourth-year PhD candidate at <a href="https://www.cityu.edu.hk/">City University of Hong Kong</a>, working with <a href="https://recfro.github.io/">Prof. RAY LC</a>, <a href="https://shengdongzhao.com/">Prof. Shengdong Zhao</a>, and <a href="https://www.scm.cityu.edu.hk/people/lei-qinyuan">Prof. Qinyuan Lei</a>. I was a visiting scholar at <a href="https://www.nd.edu/">the University of Notre Dame</a>, working with <a href="https://toby.li/">Prof. Toby Jiajun Li</a>, and a Research Scientist Intern at <a href="https://research.adobe.com/">Adobe Research</a>.</p>
 
+<h2 id="research-interests" style="margin-top: 25px;">Research interests</h2>
+
+<p style="text-align: justify;">I study how people develop ideas and create new forms of media through <strong style="color: #1a3a5c;">multimodal human-AI collaboration workflows</strong>. I am interested in making <strong style="color: #1a3a5c;">multimodal world models and agentic systems</strong> more steerable, and in evaluating models' ability to reason and adapt as goals and interaction contexts change.</p>
 
   <div id="news-header" style="display: flex; align-items: center; gap: 10px; margin: 40px 0 20px;">
     <span style="color: #2c3e50; font-size: 24px;">📣</span>
@@ -274,7 +284,7 @@
     <button id="btn-first" class="pub-filter-btn" onclick="filterPubs('first')">Selected Publications</button>
   </div>
 
-  <h3> <span style="color:#c47c2b;"><b>Cognitive Support</b></span> of Human-AI Interaction Paradigms</h3>
+  <h3><span style="color:#c47c2b;">Multimodal Interfaces for Developing Ideas</span></h3>
 
   <ol class="bibliography">
     <li data-first-author="true" id="momix">
@@ -307,10 +317,35 @@
             <div class="periodical"><em>Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems <strong>(CHI '26)</strong></em></div>
           <div class="links">
             <a href="https://fukexuexue.github.io/Vistoria-CHI2026/" class="btn btn-sm z-depth-0 video-btn" role="button" target="_blank" style="font-size:12px; background: #1a3a5c; color: white; border: none; margin-left: 5px;">
-              <span class="video-icon"></span> Website
+              <span class="video-icon"></span> Website</a>
 
             <a href="https://dl.acm.org/doi/10.1145/3772318.3790400" class="btn btn-sm z-depth-0" role="button" target="_blank" 
             style="font-size:12px;">Doi</a>
+          </div>
+        </div>
+      </div>
+    </li>
+
+
+
+
+  </ol>
+
+  <h3><span style="color:#c47c2b;">Human-AI Collaboration for Science Communication</span></h3>
+  <ol class="bibliography">
+
+    <li data-first-author="true">
+      <div class="pub-row">
+        <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
+          <img src="assets/img/taxonomy.png" class="teaser img-fluid z-depth-1" style="width=80;height=30%" />
+          <abbr class="badge">TOCHI</abbr>
+        </div>
+        <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+          <div class="title"><span style="color: #1a3a5c;">Crafting Memorable Science Stories: Harnessing the Power of Narrative Peaks in Online Science Videos</span></div>
+          <div class="author"> <strong>Kexue Fu</strong>, Yawen Zhang, Hiu Man Ho, Wenzhe Hu, RAY LC, Qinyuan Lei, Shengdong Zhao </div>
+          <div class="periodical"><em>Accepted, ACM Transactions on Computer-Human Interaction <strong>(TOCHI)</strong></em></div>
+          <div class="links">
+            <a href="assets/pdf/TOCHI_LearningPeak.pdf" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">PDF</a>
           </div>
         </div>
       </div>
@@ -340,27 +375,6 @@
       </div>
     </li>
 
-
-  <h3>Human-AI Interaction to Support <span style="color:#c47c2b;">Science Communication</span></h3>
-  <ol class="bibliography">
-
-    <li data-first-author="true">
-      <div class="pub-row">
-        <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
-          <img src="assets/img/taxonomy.png" class="teaser img-fluid z-depth-1" style="width=80;height=30%" />
-          <abbr class="badge">TOCHI</abbr>
-        </div>
-        <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
-          <div class="title"><span style="color: #1a3a5c;">Crafting Memorable Science Stories: Harnessing the Power of Narrative Peaks in Online Science Videos</span></div>
-          <div class="author"> <strong>Kexue Fu</strong>, Yawen Zhang, Hiu Man Ho, Wenzhe Hu, RAY LC, Qinyuan Lei, Shengdong Zhao </div>
-          <div class="periodical"><em>In press, ACM Transactions on Computer-Human Interaction <strong>(TOCHI)</strong></em></div>
-          <div class="links">
-            <a href="assets/pdf/TOCHI_LearningPeak.pdf" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">PDF</a>
-          </div>
-        </div>
-      </div>
-    </li>
-
     <li data-first-author="false">
       <div class="pub-row">
         <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
@@ -384,7 +398,7 @@
 
   
   <!-- 主题 1: HCI -->
-  <h3>Human-AI Interaction Design to Support <span style="color:#c47c2b;">Digital Storytelling</span></h3>
+  <h3><span style="color:#c47c2b;">Interactive Media for Storytelling and Cultural Engagement</span></h3>
   <ol class="bibliography">
     <li data-first-author="true">
       <div class="pub-row">
@@ -445,7 +459,7 @@
   </ol>
 
   <!-- 主题 2: VR -->
-  <h3><span style="color:#c47c2b;">Embodied Interaction</span> for Empowering Creative Expression</h3>
+  <h3><span style="color:#c47c2b;">Embodied Interaction for Communication and Performance</span></h3>
   <ol class="bibliography">
     <li data-first-author="true">
       <div class="pub-row">
@@ -514,14 +528,19 @@
 <div class="academic-service" style="margin-top: 20px; font-size: 0.9em; color: #333;">
   <h3 style="margin-bottom: 10px;">Academic Service</h3>
   <ul style="list-style-type: disc; padding-left: 20px;">
-    <li>Reviewer for <em>ACM CHI, DIS, C&C, IMX, SIGGRAPH Asia</em></li>
+    <li>Reviewer for <em>ACM CHI, UIST, DIS, C&amp;C, IMX, SIGGRAPH</em></li>
     <li>Program Committee Member for <em>CHI LBW 2025</em></li>
   </ul>
 </div>
 
+</section>
 </div>
 
-<footer style="
+<footer id="site-footer" style="
+  position: static;
+  float: none;
+  clear: both;
+  inset: auto;
   width: 100%;
   background-color: #ffffff;
   text-align: center;
