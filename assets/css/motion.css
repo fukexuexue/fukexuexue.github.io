@@ -39,11 +39,11 @@ html { scroll-behavior: smooth; }
 .loopy-spark:nth-child(3n) { color: #c47c2b; width: 6px; height: 11px; }
 .loopy-spark:nth-child(3n + 1) { color: var(--global-hover-color, #ffb81c); }
 @media (hover: hover) and (pointer: fine) {
-  /* Keep the native arrow/hand at the exact click point. */
+  html.loopy-active, html.loopy-active * { cursor: none !important; }
   .loopy-cursor.is-visible { display: block; }
 }
 @media (prefers-reduced-motion: no-preference) {
-  .loopy-cursor.is-over-image .loopy-character { animation: loopy-wiggle 850ms ease-in-out infinite; }
+
   .loopy-cursor.is-over-image .loopy-spark { animation: loopy-firework 1350ms ease-out var(--delay) infinite; }
   @keyframes loopy-wiggle { 0%, 100% { transform: rotate(-7deg) translateY(0); } 50% { transform: rotate(7deg) translateY(-3px); } }
   @keyframes loopy-firework {
