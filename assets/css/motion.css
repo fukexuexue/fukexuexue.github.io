@@ -82,3 +82,18 @@ html { scroll-behavior: smooth; }
   font-size: 13px; font-weight: 400; color: #1a3a5c; text-align: center;
   pointer-events: none;
 }
+
+/* Stable, generous targets: feedback must not move the click area. */
+.publications ol.bibliography li .links a.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  box-sizing: border-box; min-height: 44px; min-width: 52px;
+  padding: 8px 12px; line-height: 1.2; border-radius: 5px;
+}
+.pub-filter-btn { min-height: 44px; }
+.social-icons a { width: 44px; height: 44px; line-height: 44px; }
+:is(button, a.btn, .social-icons a, #back-to-top):is(:hover, :active) {
+  transform: none !important;
+}
+:is(button:not(.profile-photos), a.btn):active {
+  box-shadow: inset 0 0 0 2px rgba(26, 58, 92, .3) !important;
+}
