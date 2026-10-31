@@ -75,3 +75,6 @@ header h2{font-family:'Bodoni Moda',Didot,Georgia,serif!important;font-size:24px
 @font-face{font-family:'Name Brush';src:url('../fonts/name-brush.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
 header h2.chinese-name{font-family:'Name Brush','Kaiti SC',KaiTi,cursive!important;font-size:31px!important;font-weight:400!important;letter-spacing:5px;line-height:1.65!important;color:#304843}
 .gallery-wordmark span{font-family:'Name Brush','Kaiti SC',KaiTi,cursive;font-size:19px;font-weight:400;letter-spacing:3px;color:#304843}
+
+/* One static portrait; no image-switching control. */
+.profile-photos{cursor:default}

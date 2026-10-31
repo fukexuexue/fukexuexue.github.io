@@ -1,26 +1,6 @@
 (() => {
   'use strict';
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const portrait = document.querySelector('.profile-photos');
-  if (portrait) {
-    const setPortrait = active => {
-      portrait.classList.toggle('show-alternate', active);
-      portrait.setAttribute('aria-pressed', String(active));
-      portrait.setAttribute('aria-label', active ? 'Show first portrait' : 'Show alternate portrait');
-    };
-    portrait.addEventListener('pointerenter', event => {
-      if (event.pointerType === 'mouse') setPortrait(true);
-    });
-    portrait.addEventListener('pointerleave', event => {
-      if (event.pointerType === 'mouse') setPortrait(false);
-    });
-    portrait.addEventListener('pointercancel', () => setPortrait(false));
-    portrait.addEventListener('click', event => {
-      // Touch and keyboard users can still switch portraits by activating the button.
-      if (event.pointerType === 'mouse' && event.detail > 0) return;
-      setPortrait(!portrait.classList.contains('show-alternate'));
-    });
-  }
   // The center of the ink landscape follows the exact pointer position.
   const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
   const cursor = document.createElement('span');
