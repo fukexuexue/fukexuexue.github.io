@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Bodoni+Moda:ital,wght@0,400;0,500;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+SC:wght@400;500&display=swap');
+:root{--paper:#fbfbf8;--ink:#293a3d;--blue:#406773;--rule:#dce0da;--global-theme-color:#406773;--global-hover-color:#976e40}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.85 'Source Sans 3',Arial,sans-serif}a{color:var(--blue)}a:hover{color:#90663d}p a{text-decoration:underline;text-decoration-color:#b4c5c5;text-underline-offset:4px}strong{font-weight:600;color:var(--ink)}h1,h2,h3,h4{color:var(--ink)}::selection{background:#dce8e6}a:focus-visible,button:focus-visible,.news-container:focus-visible{outline:2px solid #986c3d;outline-offset:4px}
+.topnav{position:sticky;top:0;z-index:1001;background:rgba(251,251,248,.97);border-bottom:1px solid var(--rule);padding:17px 0;overflow:visible}.nav-container{max-width:1132px;padding:0 26px;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:20px}.gallery-wordmark{font:25px/1.2 'Bodoni Moda',Georgia,serif;color:var(--ink);white-space:nowrap}.gallery-wordmark span{font:12px 'Noto Serif SC',serif;letter-spacing:3px;margin-left:16px;color:#697d7c}.nav-links{display:flex;gap:30px;width:auto;margin:0}.nav-links a{font-size:12px;font-weight:400;color:#526364}.nav-links a:hover{text-decoration:underline;text-underline-offset:6px}
+.art-banner{max-width:1080px;width:calc(100% - 72px);height:216px;margin:30px auto 0;overflow:hidden;background:#d7e2e1}.art-banner img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 53%}
+.wrapper,div.wrapper{display:grid;grid-template-columns:235px minmax(0,1fr);gap:78px;width:calc(100% - 72px);max-width:1080px;margin:46px auto 0}header{position:sticky;top:100px;align-self:start;float:none;width:auto;padding:0;max-height:none;overflow:visible;z-index:2;text-align:left}section{width:auto;float:none;margin:0;padding:0 0 65px;border:0;min-width:0}.profile-photos{width:100%;max-width:235px;margin:0 0 24px;padding:0;border:0;border-radius:5px;overflow:hidden;background:transparent;box-shadow:none;transform:none}.profile-photos img{border-radius:5px}.profile-photos .profile-alternate{inset:0;width:100%;height:100%;object-fit:cover}header h2{font:26px/1.25 'Bodoni Moda',Georgia,serif!important}header h2.chinese-name{font:19px/1.8 'Noto Serif SC',serif!important;letter-spacing:4px;margin:4px 0 16px!important;color:#637a78}header>div:not(.social-icons){font-size:12px!important;color:#65716e}email{font:11px 'Source Sans 3',Arial,sans-serif}.social-icons{margin-top:12px!important;display:flex;gap:8px}.social-icons a{color:#526e73!important;width:34px;height:40px;line-height:40px;border-radius:0}.social-icons a:hover{background:#e9efeb}.social-link-label{text-align:left;color:#70817b;font-size:11px}header>br{display:none}
+.page-note{font:10px/1.5 'Source Sans 3',Arial,sans-serif;text-transform:uppercase;letter-spacing:2.8px;color:#8d7557}.intro-heading{margin:12px 0 26px;display:block}.intro-heading h1{font:52px/1.08 'Bodoni Moda',Georgia,serif;letter-spacing:-1.2px;margin:0}.intro-heading em{font-weight:400;color:#587b80}section>p{text-align:left!important;line-height:1.95;margin-bottom:25px}section>p strong{color:#365b64!important;background:none}#research-interests{font:32px/1.2 'Bodoni Moda',Georgia,serif;margin:32px 0 15px!important}#news-header{margin:35px 0 16px!important}#news-header>span{display:none}#news-header h2{font:32px 'Bodoni Moda',Georgia,serif}.news-container{width:100%;max-width:none;max-height:180px;margin:0;padding:0 15px 0 0;background:transparent;border:0;border-radius:0;scrollbar-color:#b8c8c6 transparent}.news-item{padding:11px 0;margin:0;border:0;border-bottom:1px solid #e4e8e2;background:transparent;border-radius:0;font-size:12px;line-height:1.8}.news-item:hover{transform:none;background:transparent}.news-item strong{color:#536d72}.news-container::-webkit-scrollbar-thumb{background:#bccac8}
+#about-me,#publications,#research-interests{scroll-margin-top:95px}.publications{margin-top:30px}.publications>h2{font:44px 'Bodoni Moda',Georgia,serif;margin:5px 0 22px}.pub-filter-bar{gap:12px;flex-wrap:wrap;margin-bottom:35px}.pub-filter-btn{font:12px 'Source Sans 3',Arial,sans-serif;padding:9px 15px;border:1px solid #c1ceca;border-radius:2px;color:#526c6c;background:transparent;min-height:40px}.pub-filter-btn.active{background:#446870;color:#fff;border-color:#446870}.pub-filter-btn:hover:not(.active){background:#e7efeb}.publications h3{font:500 14px/1.6 'Source Sans 3',sans-serif;margin:30px 0 20px;padding-bottom:12px;border-bottom:1px solid #c6d0c9}.publications h3 span{color:#6e725f!important}.publications ol.bibliography li{margin-bottom:22px}.publications .pub-row{display:grid;grid-template-columns:195px minmax(0,1fr);gap:24px;align-items:start;padding:12px 0 25px;border-bottom:1px solid #e3e6df}.publications .pub-row>div{width:100%;height:auto!important;padding:0!important;min-width:0}.publications .paper-image-link{display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:4/3;padding:7px;border:1px solid #e2e7e3;border-radius:5px;background:#fff;overflow:hidden}.publications ol.bibliography li .teaser{display:block;width:100%;height:100%;max-height:none;object-fit:contain;margin:0;border-radius:3px;box-shadow:none;transform:none}.publications ol.bibliography li .abbr abbr{left:8px;top:9px;font:9px 'Source Sans 3',sans-serif;background:#526f73;padding:4px 6px;box-shadow:none;border-radius:2px}.publications .title{font:600 15px/1.6 'Source Sans 3',sans-serif;margin-bottom:8px}.publications .title a{color:#304e55!important}.publications .author,.publications .periodical{font-size:12px;line-height:1.75;color:#6c7673}.publications .periodical{margin:7px 0 12px}.publications .links{gap:7px!important}.publications ol.bibliography li .links a.btn{font:11px 'Source Sans 3',sans-serif!important;padding:7px 11px;min-height:36px;border:1px solid #b7c9c7!important;border-radius:2px;background:transparent!important;color:#42656b!important;margin:0!important;animation:none;box-shadow:none}.demo-btn::before{display:none}.demo-icon,.video-icon{animation:none}body :is(button:not(.profile-photos),a.btn):hover{background-color:#e3ece8!important;color:#304f55!important;box-shadow:none!important}body .pub-filter-btn.active:hover{background-color:#365960!important;color:#fff!important}.academic-service{padding-top:25px;border-top:1px solid #c6d0c9}.academic-service h3{font:30px 'Bodoni Moda',serif}.academic-service li{font-size:12px}#site-footer{background:transparent!important;border-top:1px solid var(--rule);font:11px 'Source Sans 3',sans-serif!important;color:#7a827b!important;padding:25px!important}#back-to-top{background:var(--paper)!important;color:#4d696a!important;border:1px solid #bdcbc7;border-radius:2px;box-shadow:none;font:11px/30px 'Source Sans 3',sans-serif}.skip-link{position:fixed;top:-80px;left:20px;z-index:10002;background:var(--paper);padding:10px}.skip-link:focus{top:10px}
+@media(max-width:1000px){.wrapper,div.wrapper{grid-template-columns:205px minmax(0,1fr);gap:46px;width:calc(100% - 48px)}.art-banner{width:calc(100% - 48px);height:180px}.publications .pub-row{grid-template-columns:145px minmax(0,1fr);gap:20px}.intro-heading h1{font-size:46px}}
+@media(max-width:720px){.art-banner{width:calc(100% - 40px);height:150px;margin-top:20px}.wrapper,div.wrapper{display:block;max-width:530px;width:calc(100% - 40px);margin:30px auto 0}header{position:static;max-width:330px;margin:0 auto 30px;text-align:center}.profile-photos{width:165px;margin:0 auto 20px}.social-icons{justify-content:center}.social-link-label{text-align:center}section{border-top:1px solid var(--rule);padding:28px 0 45px}.intro-heading h1{font-size:43px}.nav-container{padding:0 20px;gap:12px}.gallery-wordmark{font-size:21px}.gallery-wordmark span{display:none}.nav-links{gap:18px}.nav-links a{font-size:11px}.publications .pub-row{grid-template-columns:135px minmax(0,1fr);gap:16px}}
+@media(max-width:420px){.publications .pub-row{grid-template-columns:1fr}.publications .abbr{max-width:250px}.intro-heading h1{font-size:40px}.nav-links{gap:12px}.art-banner{height:125px}.gallery-wordmark{font-size:20px}}
+@media print{.topnav,.art-banner,.skip-link,#back-to-top{display:none}.wrapper,div.wrapper{display:block;width:100%;margin:0}header{position:static}body{background:#fff}.news-container{max-height:none;overflow:visible}}
+
+/* Reading typography: display serif for headings, humanist sans for research text. */
+body{font-size:15px}section>p{line-height:1.85}.publications .author,.publications .periodical{font-size:13px}.news-item{font-size:13px}.publications .title{font-size:16px}
+
+/* Restore native cursor even if an older motion script is cached. */
+html.loopy-active,html.loopy-active *{cursor:auto!important}html.loopy-active a,html.loopy-active button{cursor:pointer!important}.loopy-cursor{display:none!important}
+
+/* The painting is the page environment, with quiet space behind the text. */
+html{background:#e8eeeb}
+body{background:transparent;isolation:isolate;position:relative;min-height:100vh}
+body::before{content:'';position:fixed;inset:0;z-index:-2;pointer-events:none;background:url('../img/atmospheric-landscape.png') 68% center / cover no-repeat}
+body::after{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(249,250,246,.12) 0%,rgba(249,250,246,.78) 17%,rgba(249,250,246,.89) 34%,rgba(249,250,246,.90) 72%,rgba(249,250,246,.72) 89%,rgba(249,250,246,.18) 100%)}
+.topnav{background:rgba(246,249,245,.7);backdrop-filter:blur(16px);border-bottom-color:rgba(66,94,97,.15)}
+.wrapper,div.wrapper{margin-top:80px;margin-bottom:45px}
+header{padding:10px 0 0}
+section{padding-top:6px}
+.intro-heading h1{font-size:60px;margin-bottom:34px}
+.page-note{color:#795c3c}
+.news-item,.publications .pub-row{border-bottom-color:rgba(70,99,101,.16)}
+.publications h3,.academic-service{border-color:rgba(70,99,101,.28)}
+#site-footer{background:rgba(245,248,244,.65)!important;border-color:rgba(70,99,101,.16)}
+@media(min-width:1450px){body::after{background:linear-gradient(90deg,rgba(249,250,246,.04),rgba(249,250,246,.65) 17%,rgba(249,250,246,.90) 32%,rgba(249,250,246,.90) 70%,rgba(249,250,246,.6) 87%,rgba(249,250,246,.08))}}
+@media(max-width:1000px){body::after{background:linear-gradient(90deg,rgba(249,250,246,.28),rgba(249,250,246,.70) 22%,rgba(249,250,246,.90) 40%,rgba(249,250,246,.89) 91%,rgba(249,250,246,.65))}.intro-heading h1{font-size:48px}}
+@media(max-width:720px){body::before{background-position:62% center}body::after{background:rgba(249,250,246,.87)}.wrapper,div.wrapper{margin-top:36px}header{padding:0}section{padding-top:28px}.intro-heading h1{font-size:43px;margin-bottom:25px}.topnav{background:rgba(249,250,246,.88)}}
+@media print{body::before,body::after{display:none}body,html{background:white}.wrapper,div.wrapper{margin:0}}
+
+/* Literary typography with a more expressive display face. */
+body{font-family:'EB Garamond',Georgia,serif;font-size:18px}
+section>p{line-height:1.65;letter-spacing:.05px}
+.intro-heading h1{font-family:'Bodoni Moda',Didot,Georgia,serif;font-weight:400;font-size:54px;line-height:1.2;letter-spacing:-1.5px}
+.intro-heading h1 em{font-weight:400;color:#466c72}
+.gallery-wordmark{font-size:23px;letter-spacing:-.5px}
+header h2{font-family:'Bodoni Moda',Didot,Georgia,serif!important;font-size:24px!important}
+#research-interests,#news-header h2,.academic-service h3{font-family:'Bodoni Moda',Didot,Georgia,serif;font-size:29px;font-weight:400;letter-spacing:-.6px}
+.publications>h2{font-family:'Bodoni Moda',Didot,Georgia,serif;font-size:39px;font-weight:400;letter-spacing:-1px}
+.publications .title{font-family:'EB Garamond',Georgia,serif;font-weight:600;font-size:19px;line-height:1.35}
+.publications .author,.publications .periodical{font-size:15px;line-height:1.55}.news-item{font-size:16px;line-height:1.6}
+.nav-links,.page-note,header>div,.pub-filter-btn,.publications h3,.links,#site-footer{font-family:'Source Sans 3',Arial,sans-serif}
+.ink-cursor{display:none;position:fixed;left:0;top:0;width:45px;height:45px;z-index:10000;pointer-events:none}
+.ink-cursor::before{content:'';position:absolute;left:-2px;top:-2px;width:4px;height:4px;border-radius:50%;background:#244f55;box-shadow:0 0 0 1px #ffffffe0}
+.ink-cursor img{position:absolute;left:3px;top:3px;width:40px;height:40px;object-fit:contain;pointer-events:none}
+.ink-cursor.over-control::before{background:#936b3c;box-shadow:0 0 0 2px #ffffffcc,0 0 0 3px #936b3c88}
+@media(hover:hover) and (pointer:fine){html.ink-cursor-active,html.ink-cursor-active *{cursor:none!important}.ink-cursor.visible{display:block}}
+@media(max-width:1000px){.intro-heading h1{font-size:43px}.gallery-wordmark{font-size:21px}}
+@media(max-width:720px){body{font-size:18px}.intro-heading h1{font-size:39px;letter-spacing:-1px}.gallery-wordmark{font-size:18px}.publications>h2{font-size:34px}}
+@media print{.ink-cursor{display:none!important}}
+
+/* Center the ink mountain on the actual pointer coordinates. */
+.ink-cursor{width:32px;height:32px;margin-left:-16px;margin-top:-16px}
+.ink-cursor::before{display:none}
+.ink-cursor img{left:0;top:0;width:32px;height:32px;max-width:none;transform-origin:center;filter:drop-shadow(0 1px 1px rgba(255,255,255,.9))}
+@media(prefers-reduced-motion:no-preference){
+  .ink-cursor.ink-bloom img{animation:ink-mountain-bloom 760ms ease-out both}
+  @keyframes ink-mountain-bloom{
+    0%{filter:blur(0);opacity:1;transform:scale(1)}
+    35%{filter:blur(1.5px);opacity:.85;transform:scale(1.32)}
+    70%{filter:blur(.5px);opacity:.95;transform:scale(1.1)}
+    100%{filter:blur(0);opacity:1;transform:scale(1)}
+  }
+}
+
+/* Locally served brush-calligraphy subset for the Chinese name. */
+@font-face{font-family:'Name Brush';src:url('../fonts/name-brush.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
+header h2.chinese-name{font-family:'Name Brush','Kaiti SC',KaiTi,cursive!important;font-size:31px!important;font-weight:400!important;letter-spacing:5px;line-height:1.65!important;color:#304843}
+.gallery-wordmark span{font-family:'Name Brush','Kaiti SC',KaiTi,cursive;font-size:19px;font-weight:400;letter-spacing:3px;color:#304843}

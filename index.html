@@ -2,6 +2,7 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kexue Shirley Fu</title>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap');
@@ -23,12 +24,12 @@
     <link rel="stylesheet" href="assets/css/pub.css">
     <link rel="stylesheet" href="assets/css/nav.css">
     <link rel="stylesheet" href="assets/css/motion.css?v=20261030-stable-targets">
-    <script defer src="assets/js/motion.js?v=20261030-stable-targets"></script>
-    
+    <script defer src="assets/js/motion.js?v=20261031-ink-center"></script>
+
     <script src="assets/js/github-stars.js"></script>
     <script type="text/javascript" src="assets/js/jquery.js"></script>
     <script src="assets/js/favicon-switcher.js" type="application/javascript"></script>
-    
+
     <style>
       .pub-filter-bar { display: flex; gap: 8px; margin-bottom: 18px; }
       .pub-filter-btn {
@@ -49,6 +50,8 @@
       }
       function filterPubs(type) {
         document.getElementById('btn-all').classList.toggle('active', type === 'all');
+        document.getElementById('btn-all').setAttribute('aria-pressed', String(type === 'all'));
+        document.getElementById('btn-first').setAttribute('aria-pressed', String(type === 'first'));
         document.getElementById('btn-first').classList.toggle('active', type === 'first');
         document.querySelectorAll('.bibliography li').forEach(function(li) {
           li.style.display = (type === 'all' || li.dataset.firstAuthor === 'true') ? '' : 'none';
@@ -73,27 +76,27 @@
       }
       }
    </script>
-   
+
 
   <script src="assets/js/tooltip.js?v=20261030-stable-targets"></script>
 
 
+    <link rel="stylesheet" href="assets/css/gallery.css?v=20261031-calligraphy">
   </head>
   <body>
-    
+    <a class="skip-link" href="#about-me">Skip to content</a>
+
     <nav class="topnav">
       <div class="nav-container">
-        <div class="logo">
-          <img src="assets/img/Loopy1.png" alt="" class="nav-logo">
-        </div>
+        <a class="gallery-wordmark" href="#about-me">Kexue Shirley Fu <span lang="zh-Hans">付珂雪</span></a>
         <div class="nav-links">
-          <a href="#about-me">Bio</a>
+          <a href="#about-me">About me</a>
           <a href="#publications">Publications</a>
           <!-- <a href="assets/pdf/CV.pdf">CV</a> -->
         </div>
       </div>
     </nav>
-    
+
 
     <script src="assets/js/vanilla-back-to-top.min.js"></script>
     <script>addBackToTop({
@@ -113,18 +116,19 @@
           height: 30px;
         }
     </style>
-    
+
     <div class="wrapper">
       <header>
-        
-        
+
+
+
         <button class="profile-photos" type="button" aria-label="Show alternate portrait" aria-pressed="false">
-          <img src="assets/img/profile.jpg" alt="Kexue Shirley Fu" class="profile-main">
-          <img src="assets/img/profile-alternate.jpg" alt="" aria-hidden="true" class="profile-alternate" width="667" height="1000">
+          <img src="assets/img/profile-garden.png" alt="Kexue Shirley Fu" class="profile-main">
+          <img src="assets/img/profile.jpg" alt="" aria-hidden="true" class="profile-alternate">
         </button>
-        
+
         <h2 style="margin-top: 5px; margin-bottom: 0px; font-size: 1.5em;">Kexue 'Shirley' Fu</h2>
-        <h2 style="margin-top: 0; margin-bottom: 5px; font-size: 1.5em;">付珂雪</h2>
+        <h2 class="chinese-name" lang="zh-Hans" style="margin-top: 0; margin-bottom: 5px; font-size: 1.5em;">付珂雪</h2>
         <div style="margin-bottom: 5px; font-size: 0.9em;">City University of Hong Kong</div>
         <div style="margin-bottom: 5px; font-size: 0.9em;"><email>kexuefu2-c@my.cityu.edu.hk</email></div>
         <div class="social-icons" style="margin-top: -5px;">
@@ -143,39 +147,34 @@
           <a style="margin: 0 0 0 0" href="https://www.instagram.com/kexue_fu?igsh=MTNrbHd2eWJhcGt5Mw%3D%3D&utm_source=qr" title="Instagram">
             <i class="fab fa-instagram" style="font-size:1rem"></i>
           </a>
-          
+
           <!-- <a style="margin: 0 0 0 5px" href="assets/pdf/CV.pdf" title="Curriculum Vitae">
             <i class="fas fa-file-alt" style="font-size:1rem"></i>
           </a> -->
         </div>
-        <h4 style="margin-top: 0; margin-bottom: 5px; font-size: 0.8em;">I am always delighted to work and collaborate with brilliant minds!</h4>
+
 
         <br>
 
       </header>
       <section>
 
-      <h1 id="about-me"></h1>
+      <div id="about-me" class="page-note">About</div>
 
-<div class="intro-heading">
-<h2>
-  <img src="assets/img/Loopy2.JPG" alt="Wave" style="height: 1.5em; vertical-align: middle; margin-right: 10px;">
-  Hi there!
-</h2>
-</div>
+<div class="intro-heading"><h1>Kexue <em>Shirley</em> Fu</h1></div>
 
-<p style="text-align: justify;">I am a fourth-year PhD candidate at <a href="https://www.cityu.edu.hk/">City University of Hong Kong</a>, working with <a href="https://recfro.github.io/">Prof. RAY LC</a>, <a href="https://shengdongzhao.com/">Prof. Shengdong Zhao</a>, and <a href="https://www.scm.cityu.edu.hk/people/lei-qinyuan">Prof. Qinyuan Lei</a>. I was a visiting scholar at <a href="https://www.nd.edu/">the University of Notre Dame</a>, working with <a href="https://toby.li/">Prof. Toby Jiajun Li</a>, and a Research Scientist Intern at <a href="https://research.adobe.com/">Adobe Research</a>.</p>
+<p style="text-align: justify;">I am a fourth-year PhD candidate working at the intersection of HCI and AI at <a href="https://www.cityu.edu.hk/">City University of Hong Kong</a>, where I work with <a href="https://recfro.github.io/">Prof. RAY LC</a>, <a href="https://shengdongzhao.com/">Prof. Shengdong Zhao</a>, and <a href="https://www.scm.cityu.edu.hk/people/lei-qinyuan">Prof. Qinyuan Lei</a>. I was also a visiting scholar at <a href="https://www.nd.edu/">the University of Notre Dame</a>, working with <a href="https://toby.li/">Prof. Toby Jiajun Li</a>, and a Research Scientist Intern at <a href="https://research.adobe.com/">Adobe Research</a>.</p>
 
 <h2 id="research-interests" style="margin-top: 25px;">Research interests</h2>
 
-<p style="text-align: justify;">I study how people develop ideas and create new forms of media through <strong style="color: #1a3a5c;">multimodal human-AI collaboration workflows</strong>. I am interested in making <strong style="color: #1a3a5c;">multimodal world models and agentic systems</strong> more steerable, and in evaluating models' ability to reason and adapt as goals and interaction contexts change.</p>
+<p style="text-align: justify;">I study how people develop ideas and create new forms of media through <strong style="color: #1a3a5c;">multimodal human-AI collaboration workflows</strong>. I am interested in studying and designing <strong style="color: #1a3a5c;">world model interfaces and steerable agentic workflows</strong> that enable people to create and shape interactive experiences that adapt to their actions and evolving goals. I am also interested in evaluating models’ ability to interpret, act on, and adapt to changing interfaces.</p>
 
   <div id="news-header" style="display: flex; align-items: center; gap: 10px; margin: 40px 0 20px;">
     <span style="color: #2c3e50; font-size: 24px;">📣</span>
     <h2 style="margin: 0;">News</h2>
   </div>
-  
-  <div class="news-container">
+
+  <div class="news-container" tabindex="0" role="region" aria-label="Latest news, scroll for older updates">
     <div class="news-item">
       <strong>[Oct 2026]</strong> My first-author paper has been accepted by <strong style="color: #1a3a5c;">TOCHI</strong>! My first journal paper, finally accepted after a long review process! 🎉
     </div>
@@ -183,14 +182,14 @@
       <strong>[Oct 2026]</strong> I will attend <span style="color: #1a3a5c;"><a href="https://uist.acm.org/2026/" target="_blank">UIST '26</a></span> in Detroit, Michigan, USA 🇺🇸. Looking forward to catching up with friends and meeting new people! ✈️ 🤝
     </div>
     <div class="news-item">
-      <strong>[March 2026]</strong> Will join 
+      <strong>[March 2026]</strong> Will join
       <span style="color: #1a3a5c;">
-        
+
         <a href="https://research.adobe.com/" target="_blank">Adobe Research</a>
       </span>
       as a Research Scientist Intern in San Jose ☀️. Super excited for this opportunity! 🌉 💻
     </div>
-    <div class="news-item">      <strong>[March 2026]</strong> <span style="color: #1a3a5c;">SpatialBalancing</span> accepted by <span style="color: #1a3a5c;">DIS '26</span> (21% acceptance rate)! More details will come soon. 
+    <div class="news-item">      <strong>[March 2026]</strong> <span style="color: #1a3a5c;">SpatialBalancing</span> accepted by <span style="color: #1a3a5c;">DIS '26</span> (21% acceptance rate)! More details will come soon.
     </div>
     <div class="news-item">
       <strong>[March 2026]</strong> Will attend <span style="color: #1a3a5c;">CHI'26 in Barcelona 🇪🇸🇫🇷</span>. Hope to catch up with friends and meet new people there! ✈️ 🤝
@@ -199,15 +198,15 @@
     <div class="news-item">      <strong>[January 2026]</strong> <span style="color: #1a3a5c;">Vistoria</span> being accepted by CHI‘26! Thanks to very supportive mentors and co-authors! 🎉 🎉 🎉
     </div>
     <div class="news-item">
-      <strong>[August 2025]</strong> Start my visiting scholar at <span style="color: #1a3a5c;">University of Notre Dame</span>, working with <span style="color: #1a3a5c;">Prof. Toby Jiajun Li</span> at SaNDwich Lab 🥪. Looking forward to this new Journey! 🤝 
+      <strong>[August 2025]</strong> Start my visiting scholar at <span style="color: #1a3a5c;">University of Notre Dame</span>, working with <span style="color: #1a3a5c;">Prof. Toby Jiajun Li</span> at SaNDwich Lab 🥪. Looking forward to this new Journey! 🤝
     </div>
     <div class="news-item">
-      <strong>[May 2025]</strong> "From Temporal to Spatial" win <span style="color: #1a3a5c;">Honorable Mention</span> in <span style="color: #1a3a5c;">DIS 25</span>. Congrats to my co-authors! Our hard work pays off! 🎵 
+      <strong>[May 2025]</strong> "From Temporal to Spatial" win <span style="color: #1a3a5c;">Honorable Mention</span> in <span style="color: #1a3a5c;">DIS 25</span>. Congrats to my co-authors! Our hard work pays off! 🎵
     </div>
     <div class="news-item">
-      <strong>[May 2025]</strong> "RetroChat" win <span style="color: #1a3a5c;">Honorable Mention</span> in <span style="color: #1a3a5c;">C&C 25</span>. Congrats to my co-authors! 📖 💬 💬 
+      <strong>[May 2025]</strong> "RetroChat" win <span style="color: #1a3a5c;">Honorable Mention</span> in <span style="color: #1a3a5c;">C&C 25</span>. Congrats to my co-authors! 📖 💬 💬
     </div>
-    
+
     <div class="news-item">
       <strong>[April 2025]</strong> Attend CHI'25 in Yokuhama, Japan. ✈️  🍣
     </div>
@@ -221,7 +220,7 @@
     </div>
 
     <div class="news-item">
-      <strong>[February 2025]</strong> One co-authored full paper "A Constructed Response: Designing and Choreographing Robot Arm Movements in Collaborative Dance Improvisation" has been accepted by <span style="color: #1a3a5c;">CSCW 25</span>. 🤖 
+      <strong>[February 2025]</strong> One co-authored full paper "A Constructed Response: Designing and Choreographing Robot Arm Movements in Collaborative Dance Improvisation" has been accepted by <span style="color: #1a3a5c;">CSCW 25</span>. 🤖
     </div>
 
     <div class="news-item">
@@ -275,13 +274,13 @@
     </div>
   </div>
 
-<h1 id="publications"></h1>
+<div id="publications" class="section-anchor"></div>
 <br>
 <div class="publications">
-  <h2>Publications</h2>
+  <div class="page-note">Research &amp; practice</div><h2>Publications</h2>
   <div class="pub-filter-bar">
-    <button id="btn-all" class="pub-filter-btn active" onclick="filterPubs('all')">All Publications</button>
-    <button id="btn-first" class="pub-filter-btn" onclick="filterPubs('first')">Selected Publications</button>
+    <button id="btn-all" aria-pressed="true" class="pub-filter-btn active" onclick="filterPubs('all')">All Publications</button>
+    <button id="btn-first" aria-pressed="false" class="pub-filter-btn" onclick="filterPubs('first')">Selected Publications</button>
   </div>
 
   <h3><span style="color:#c47c2b;">Multimodal Interfaces for Developing Ideas</span></h3>
@@ -290,7 +289,7 @@
     <li data-first-author="true" id="momix">
       <div class="pub-row">
         <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;height: auto;">
-          <a class="paper-image-link" href="assets/pdf/MoMix.pdf" aria-label="Read PDF: MoMix: Sketches as Mutable Anchors for Navigating and Experimenting with Design Materials on Infinite Canvases"><img src="assets/img/momix-overview.png" alt="MoMix overview showing editable sketches, visual references, and design history on an infinite canvas" class="teaser img-fluid z-depth-1" style="height: auto; object-fit: contain;" /></a>
+          <a class="paper-image-link" href="assets/pdf/MoMix.pdf" aria-label="Read PDF: MoMix: Sketches as Mutable Anchors for Navigating and Experimenting with Design Materials on Infinite Canvases"><img src="assets/img/momix-overview.png" alt="MoMix overview showing editable sketches, visual references, and design history on an infinite canvas" class="teaser img-fluid z-depth-1" /></a>
         </div>
         <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
           <div class="title"><a href="assets/pdf/MoMix.pdf" target="_blank" rel="noopener" style="color: #1a3a5c;">MoMix: Sketches as Mutable Anchors for Navigating and Experimenting with Design Materials on Infinite Canvases</a></div>
@@ -306,7 +305,7 @@
     <li data-first-author="true">
       <div class="pub-row">
         <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
-          <a class="paper-image-link" href="https://doi.org/10.1145/3772318.3790400" aria-label="Read paper: Vistoria: A Multimodal System to Support Fictional Story Writing through Instrumental Image-Text Co-Editing"><img src="assets/img/visual instruments.png" class="teaser img-fluid z-depth-1" style="width=80;height=30%" /></a>
+          <a class="paper-image-link" href="https://doi.org/10.1145/3772318.3790400" aria-label="Read paper: Vistoria: A Multimodal System to Support Fictional Story Writing through Instrumental Image-Text Co-Editing"><img src="assets/img/visual instruments.png" class="teaser img-fluid z-depth-1" /></a>
           <abbr class="badge">CHI</abbr>
         </div>
         <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
@@ -335,7 +334,7 @@
     <li data-first-author="true">
       <div class="pub-row">
         <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
-          <a class="paper-image-link" href="assets/pdf/TOCHI_LearningPeak.pdf" aria-label="Read PDF: Crafting Memorable Science Stories: Harnessing the Power of Narrative Peaks in Online Science Videos"><img src="assets/img/taxonomy.png" class="teaser img-fluid z-depth-1" style="width=80;height=30%" /></a>
+          <a class="paper-image-link" href="assets/pdf/TOCHI_LearningPeak.pdf" aria-label="Read PDF: Crafting Memorable Science Stories: Harnessing the Power of Narrative Peaks in Online Science Videos"><img src="assets/img/taxonomy.png" class="teaser img-fluid z-depth-1" /></a>
           <abbr class="badge">TOCHI</abbr>
         </div>
         <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
@@ -353,7 +352,7 @@
       <div class="pub-row">
         <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
           <abbr class="badge">DIS</abbr>
-          <a class="paper-image-link" href="https://doi.org/10.1145/3800645.3812998" aria-label="Read paper: Spatial Balancing: Designing an LLM-Powered Spatial Externalization Interface for Iterative Science Communication Writing"><img src="assets/img/Eui.png" class="teaser img-fluid z-depth-1" style="width=80;height=30%" /></a>
+          <a class="paper-image-link" href="https://doi.org/10.1145/3800645.3812998" aria-label="Read paper: Spatial Balancing: Designing an LLM-Powered Spatial Externalization Interface for Iterative Science Communication Writing"><img src="assets/img/Eui.png" class="teaser img-fluid z-depth-1" /></a>
         </div>
         <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
           <div class="title"><a href="https://doi.org/10.1145/3800645.3812998" target="_blank" style="color: #1a3a5c;">Spatial Balancing: Designing an LLM-Powered Spatial Externalization Interface for Iterative Science Communication Writing</a></div>
@@ -361,7 +360,7 @@
             <div class="periodical"><em>Proceedings of the 2026 Designing Interactive Systems Conference <strong>(DIS '26)</strong></em></div>
 
           <div class="links">
-            
+
             <a href="https://youtu.be/0ZsZdL5HBR0" class="btn btn-sm z-depth-0" role="button" style="font-size:12px; background: #1a3a5c; color: white; border: none;">
               Demo
             </a>
@@ -376,7 +375,7 @@
     <li data-first-author="false">
       <div class="pub-row">
         <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
-          <a class="paper-image-link" href="https://doi.org/10.1145/3706599.3719888" aria-label="Read paper: RevTogether: Supporting Science Story Revision with Multiple AI Agents"><img src="assets/img/science_agent.png" class="teaser img-fluid z-depth-1" style="width=100;height=40%" /></a>
+          <a class="paper-image-link" href="https://doi.org/10.1145/3706599.3719888" aria-label="Read paper: RevTogether: Supporting Science Story Revision with Multiple AI Agents"><img src="assets/img/science_agent.png" class="teaser img-fluid z-depth-1" /></a>
           <abbr class="badge">CHI</abbr>
         </div>
         <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
@@ -391,17 +390,17 @@
         </div>
       </div>
     </li>
-    
+
   </ol>
 
-  
+
   <!-- 主题 1: HCI -->
   <h3><span style="color:#c47c2b;">Interactive Media for Storytelling and Cultural Engagement</span></h3>
   <ol class="bibliography">
     <li data-first-author="true">
       <div class="pub-row">
         <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
-          <a class="paper-image-link" href="https://doi.org/10.1145/3643834.3660711" aria-label="Read paper: &quot;Being Eroded, Piece by Piece&quot;: Enhancing Engagement and Storytelling in Cultural Heritage Dissemination by Exhibiting GenAI Co-Creation Artifacts"><img src="assets/img/00.png" class="teaser img-fluid z-depth-1" style="width=100;height=40%" /></a>
+          <a class="paper-image-link" href="https://doi.org/10.1145/3643834.3660711" aria-label="Read paper: &quot;Being Eroded, Piece by Piece&quot;: Enhancing Engagement and Storytelling in Cultural Heritage Dissemination by Exhibiting GenAI Co-Creation Artifacts"><img src="assets/img/00.png" class="teaser img-fluid z-depth-1" /></a>
           <abbr class="badge">DIS</abbr>
         </div>
         <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
@@ -419,7 +418,7 @@
     <li data-first-author="false">
       <div class="pub-row">
         <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
-          <a class="paper-image-link" href="https://doi.org/10.1145/3715336.3735787" aria-label="Read paper: From Temporal to Spatial: Designing Spatialized Interactions with Segmented-audios in Immersive Environments for Active Engagement with Performing Arts Intangible Cultural HeritageHonorable Mention"><img src="assets/img/6.2progressive.png" class="teaser img-fluid z-depth-1" style="width=100;height=40%" /></a>
+          <a class="paper-image-link" href="https://doi.org/10.1145/3715336.3735787" aria-label="Read paper: From Temporal to Spatial: Designing Spatialized Interactions with Segmented-audios in Immersive Environments for Active Engagement with Performing Arts Intangible Cultural HeritageHonorable Mention"><img src="assets/img/6.2progressive.png" class="teaser img-fluid z-depth-1" /></a>
           <abbr class="badge">DIS</abbr>
         </div>
         <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
@@ -437,7 +436,7 @@
     <li data-first-author="false">
       <div class="pub-row">
         <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
-          <a class="paper-image-link" href="https://doi.org/10.1145/3698061.3726920" aria-label="Read paper: RetroChat: Designing for the Preservation of Past Chinese Online Social Experiences Honorable Mention"><img src="assets/img/Storyboard v1.png" class="teaser img-fluid z-depth-1" style="width=100;height=40%" /></a>
+          <a class="paper-image-link" href="https://doi.org/10.1145/3698061.3726920" aria-label="Read paper: RetroChat: Designing for the Preservation of Past Chinese Online Social Experiences Honorable Mention"><img src="assets/img/Storyboard v1.png" class="teaser img-fluid z-depth-1" /></a>
           <abbr class="badge">C&C</abbr>
         </div>
         <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
@@ -452,7 +451,7 @@
       </div>
     </li>
 
-  
+
     <!-- 其他 HCI 相关出版物 -->
   </ol>
 
@@ -462,7 +461,7 @@
     <li data-first-author="true">
       <div class="pub-row">
         <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
-          <a class="paper-image-link" href="https://doi.org/10.1145/3544548.3581464" aria-label="Read paper: &quot;I Am a Mirror Dweller&quot;: Probing the Unique Strategies Users Take to Communicate in the Context of Mirrors in Social Virtual Reality"><img src="assets/img/10.png" class="teaser img-fluid z-depth-1" style="width=100;height=40%" /></a>
+          <a class="paper-image-link" href="https://doi.org/10.1145/3544548.3581464" aria-label="Read paper: &quot;I Am a Mirror Dweller&quot;: Probing the Unique Strategies Users Take to Communicate in the Context of Mirrors in Social Virtual Reality"><img src="assets/img/10.png" class="teaser img-fluid z-depth-1" /></a>
           <abbr class="badge">CHI</abbr>
         </div>
         <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
@@ -481,7 +480,7 @@
     <li data-first-author="false">
       <div class="pub-row">
         <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
-          <a class="paper-image-link" href="https://doi.org/10.1145/3706598.3713390" aria-label="Read paper: &quot;Becoming My Own Audience&quot;: How Dancers React to Avatars Unlike Themselves in Motion Capture-Supported Live Improvisational Performance."><img src="assets/img/dance_CHI.jpg" class="teaser img-fluid z-depth-1" style="width=100;height=40%" /></a>
+          <a class="paper-image-link" href="https://doi.org/10.1145/3706598.3713390" aria-label="Read paper: &quot;Becoming My Own Audience&quot;: How Dancers React to Avatars Unlike Themselves in Motion Capture-Supported Live Improvisational Performance."><img src="assets/img/dance_CHI.jpg" class="teaser img-fluid z-depth-1" /></a>
           <abbr class="badge">CHI</abbr>
         </div>
         <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
@@ -499,7 +498,7 @@
     <li data-first-author="false">
       <div class="pub-row">
         <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
-          <a class="paper-image-link" href="https://doi.org/10.1145/3757452" aria-label="Read paper: A Constructed Response: Designing and Choreographing Robot Arm Movements in Collaborative Dance Improvisation"><img src="assets/img/dance_cscw.png" class="teaser img-fluid z-depth-1" style="width=100;height=40%" /></a>
+          <a class="paper-image-link" href="https://doi.org/10.1145/3757452" aria-label="Read paper: A Constructed Response: Designing and Choreographing Robot Arm Movements in Collaborative Dance Improvisation"><img src="assets/img/dance_cscw.png" class="teaser img-fluid z-depth-1" /></a>
           <abbr class="badge">CSCW</abbr>
         </div>
         <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
@@ -514,7 +513,7 @@
       </div>
     </li>
 
-  
+
   </ol>
 
   <div style="font-size: 0.8em; color: #666;">
